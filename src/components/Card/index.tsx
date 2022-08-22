@@ -47,9 +47,6 @@ const CardCanvas = styled.div`
     transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
 
     border-radius: 50px;
-    :hover {
-		transform: scale(1.01);
-	}
 `;
 
 const NextRight = styled.div`

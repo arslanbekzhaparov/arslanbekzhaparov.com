@@ -15,9 +15,9 @@ const SplineContainer = styled.div`
 
 export default function App() {
     return (
-        <SplineContainer>
+        // <SplineContainer>
       <Spline scene="https://prod.spline.design/VtJxBOOtZO7PLf8J/scene.splinecode" />
-      </SplineContainer>
+      // </SplineContainer>
     );
   }
   

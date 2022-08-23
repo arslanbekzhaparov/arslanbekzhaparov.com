@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import styled, { css, createGlobalStyle, ThemeProvider, DefaultTheme } from "styled-components";
+import styled, { keyframes, css, createGlobalStyle, ThemeProvider, DefaultTheme } from "styled-components";
 
 import Row from '../Row';
 import Column from '../Column';
@@ -7,15 +7,25 @@ import Logo from '../Logo';
 import {Link} from '../Link';
 
 import NextImg from '../Card/next.svg';
-import NextJsLogo from'../Card/nextjslogo.svg';
-import FigmaLogo from'../Card/figmalogo.svg';
-import ReactJsLogo from'../Card/reactjslogo.svg';
 import GithubLogo from'../Card/githublogo.svg';
-import SplineLogo from'../Card/splinelogo.svg';
 import HappyhebeeImg from '../Card/happyhebeefigure.svg';
 import {PEAK_HEIGHT} from '../Navbar';
 import Image from "next/image";
 import Icon from "../Logo";
+
+
+const pulse = keyframes`
+    0% { 
+        background-position: 0% 50%;
+    }
+    50% { 
+        background-position: 100% 50%;
+    }
+    100% { 
+        background-position: 0% 50%;
+    }
+`;
+
 
 const CardDiv = styled.div`
 
@@ -151,29 +161,6 @@ const PrimaryText = styled.div`
 
 `;
 
-const HealthBar = styled.div`
-    
-    position: absolute;    
-    margin-top: 93.72px;
-    margin-left: 339.54px;
-    width: 155.38px;
-    height: 10.69px;
-
-    background: #5C3E46;
-    border-radius: 20px;
-
-`;
-
-const Health = styled.div`
-    
-    position: fixed;
-    width: 106.88px;
-    height: 10.69px;
-
-    background: #51CF8B;
-    border-radius: 20px;
-
-`;
 
 const YearBlock = styled.div`
     
@@ -184,7 +171,9 @@ const YearBlock = styled.div`
     margin-top: 35px;
     margin-left: 655px;
 
-    background: linear-gradient(113.44deg, #F8878D 3.17%, #B777E0 51.56%, #85A9EE 101.63%);
+    background: linear-gradient(-45deg, #F8878D, #4776E6, #8E54E9);
+    background-size: 400% 400%;
+    animation: ${pulse} 10000ms ease infinite;
     border-radius: 48px;
 
     font-family: 'Arial';
@@ -197,21 +186,13 @@ const YearBlock = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-`;
-
-const Logos = styled.div`
     
-    position: absolute;
-    width: 155px;
-    height: 32px;
-    margin-top: 120px;
-    margin-left: 339px;
 `;
 
 const Description=styled.div`
 
     position: absolute;
-    width: 299px;
+    width: 100%px;
     height: 115px;
     margin-top: 240px;
     margin-left: 340px;
@@ -227,10 +208,10 @@ const Description=styled.div`
 const GithubButton=styled.div`
 
     position: absolute;
-    width: 83px;
-    height: 83px;
-    margin-top: 210px;
-    margin-left: 600px;
+    width: 100px;
+    height:100px;
+    margin-top: 0px;
+    margin-left: 500px;
 
     background: rgba(162, 162, 162, 0.2);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
@@ -242,10 +223,13 @@ const GithubButton=styled.div`
     align-items: center;
     justify-content: center;
     transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
+    background: linear-gradient(-45deg, #E6DADA, #274046, #85A9EE);
+    background-size: 400% 400%;
+    animation: ${pulse} 5000ms ease infinite;
     
     :hover {
 		transform: scale(1.05);
-        background: rgba(162, 162, 162, 0.5);
+        animation-play-state: paused;
 	}
     :active {
 		transform: scale(0.95);
@@ -280,21 +264,9 @@ export default function Card(props: any){
             <YearBlock>
                     2022
             </YearBlock>
-            <HealthBar>
-                <Health>
-                </Health>
-            </HealthBar>
-            <Logos>
-            <Row>
-                <Logo src={NextJsLogo} alt={NextJsLogo} />
-                <Logo src={ReactJsLogo} alt={ReactJsLogo} />
-                <Logo src={SplineLogo} alt={SplineLogo}  />
-                <Logo src={FigmaLogo} alt={FigmaLogo}/>
-            </Row>
-            </Logos>
             <Link href={"https://github.com/arslanbekzhaparov/portfoliowebsite"} disableHoverOpacity>
                 <GithubButton>
-                    <Image src={GithubLogo} alt={GithubLogo}/>
+                    <Image src={GithubLogo} alt={GithubLogo} width="80%" height="80%"/>
                 </GithubButton>
             </Link>
             <Description>

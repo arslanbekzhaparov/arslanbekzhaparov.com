@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import Background from '../components/Background';
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
+import ContactButton from "../components/Button";
 
 
 const Home: NextPage = () => {
@@ -18,6 +19,9 @@ const Home: NextPage = () => {
       </Navbar>
       <Card>
       </Card>
+      <ContactButton>
+
+      </ContactButton>
       <Background>
 
       </Background>

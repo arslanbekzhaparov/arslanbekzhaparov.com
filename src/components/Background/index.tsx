@@ -3,6 +3,7 @@ import styled, { useTheme } from "styled-components";
 
 import Image from "next/image";
 import BackgroundIMG from '../Background/background.svg'
+import {keyframes} from 'styled-components';
 
 const BackgroundCanvas = styled.div`
     position: fixed;

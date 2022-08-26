@@ -23,6 +23,7 @@ const DownloadIcon = styled.div`
     background: rgba(162, 162, 162, 0.2);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(50px);
+    transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
     
     :hover{
         transform: scale(1.05);

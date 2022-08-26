@@ -29,8 +29,8 @@ const pulse = keyframes`
 
 const CardDiv = styled.div`
 
+    position: fixed;
     margin-top: 194px;
-    position: absolute;
     display: flex;
     flex-direction: row;
     // background-color: green;

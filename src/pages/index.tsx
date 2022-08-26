@@ -9,6 +9,8 @@ import Background from '../components/Background';
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 import ContactButton from "../components/Button";
+import Download from "../components/Download";
+import Name from "../components/Name";
 
 
 const Home: NextPage = () => {
@@ -22,6 +24,8 @@ const Home: NextPage = () => {
       <ContactButton>
 
       </ContactButton>
+      <Download></Download>
+      <Name></Name>
       <Background>
 
       </Background>

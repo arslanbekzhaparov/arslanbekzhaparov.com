@@ -37,7 +37,7 @@ const ContactMe = styled.a`
     max-height: 53px;
     margin-top: 115px;
 
-    position: absolute;
+    position: relative;
     font-family: 'Arial';
     font-style: normal;
     font-weight: 700;
@@ -68,16 +68,13 @@ const ContactMe = styled.a`
     }
 `;
 
-
 export default function Footer(props: any){
 
     return(
         <FooterDiv>
-            {/* <Link href={"https://github.com/arslanbekzhaparov/portfoliowebsite"} disableHoverOpacity > */}
                 <ContactMe href={"mailto:arslanbekzhaparov@gmail.com"}>
                     CONTACT ME
                 </ContactMe>
-                {/* </Link> */}
         </FooterDiv>
         );
 

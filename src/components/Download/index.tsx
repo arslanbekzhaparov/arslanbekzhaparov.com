@@ -11,7 +11,7 @@ import DownloadImg from '../Download/downloadicon.svg';
 
 const DownloadIcon = styled.div`
     
-    position: fixed;
+    position: absolute;
     height: 40px;
     width: 40px;
     border-radius: 50%;

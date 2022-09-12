@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import ReactPlayer from 'react-player'
 import { device } from '../styles'
+import Link from 'next/link'
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -10,16 +11,15 @@ import styled, { keyframes, css, createGlobalStyle, ThemeProvider, DefaultTheme 
 import Row from '../components/Row';
 import Column from '../components/Column';
 import Logo from '../components/Logo';
-import Link from 'next/link'
 import {Linking} from '../components/Link';
 
 import NextImg from '@images/next.svg';
 import GithubLogo from'@images/githublogo.svg';
-import HappyhebeeImg from '@images/happyhebeefigure.svg';
+import SnakeImg from '@images/snake.svg';
 import Icon from "../components/Logo";
 
 
-import BackgroundIMG from '@images/background.svg'
+import BackgroundSnakeIMG from '@images/backgroundsnake.svg'
 import Navbar, {PEAK_HEIGHT}  from "../components/Navbar";
 import Download from "../components/Download";
 import Name from "../components/Name";
@@ -209,9 +209,10 @@ const CardImageContainer = styled.div`
         margin: 20px;
 
         transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
-        background: linear-gradient(-45deg, #AEBFF2, #fff , #292E49);
+        background: linear-gradient(-45deg, #30E8BF, #fff , #FF8235#FF8235);
         background-size: 400% 400%;
         animation: ${pulse} 5000ms ease infinite;
+        
         :hover {
             transform: scale(1.05);
             animation-play-state: paused;
@@ -448,7 +449,7 @@ const GithubButton=styled.div`
     align-items: center;
     justify-content: center;
     transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
-    background: linear-gradient(-45deg, #E6DADA, #274046, #85A9EE);
+    background: linear-gradient(-45deg, #30E8BF, #fff , #FF8235#FF8235);
     background-size: 400% 400%;
     animation: ${pulse} 5000ms ease infinite;
     
@@ -496,7 +497,7 @@ const ContactMe = styled.a`
     transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(50px);
-    background: linear-gradient(-45deg, #AEBFF2, #fff , #292E49);
+    background: linear-gradient(-45deg, #30E8BF, #fff , #FF8235#FF8235);
     background-size: 400% 400%;
     animation: ${pulse} 8000ms ease infinite;
     height: 100vh;
@@ -529,15 +530,17 @@ const Home: NextPage = () => {
       <Navbar>
       </Navbar>
       <CardDiv>
+        <Link href="/index">
         <NextRight>
             <Image src={NextImg} alt="NextRight"/>
         </NextRight>
+        </Link>
         <CardCanvas>
-        <Linking href={"https://github.com/arslanbekzhaparov/portfoliowebsite"} disableHoverOpacity>
+        <Linking href={"https://github.com/arslanbekzhaparov/SNAKE-MATH-GAME.git"} disableHoverOpacity>
             <CardImageContainer>
             <Image
-                src={HappyhebeeImg}
-                alt={"Happyhebee Figure"}
+                src={SnakeImg}
+                alt={"Snake Figure"}
                 layout="responsive"
                 width="100%"
                 height="95%"
@@ -547,7 +550,7 @@ const Home: NextPage = () => {
             </Linking>
             <LetterRectangle>
                 <PrimaryText>
-                    HAPPYHEBEE
+                    SNAKEGAME
                 </PrimaryText>
             </LetterRectangle>
             <YearBlock>
@@ -564,10 +567,9 @@ const Home: NextPage = () => {
                 </GithubButton>
             </Linking>
             <Description>
-            happyhebee is an avatar that manages this website. happyhebee loves to play sports, games and make music.
+            snake game is a html/css and java script projects that educates users about coordinate system with a fun snake game concept.
             </Description>
         </CardCanvas>
-        <Link href="/snake">
         <NextLeft>
             <Image 
             src={NextImg} 
@@ -575,7 +577,6 @@ const Home: NextPage = () => {
             
               />
         </NextLeft>
-        </Link>
         </CardDiv>
         <FooterDiv>
                 <ContactMe href={"mailto:arslanbekzhaparov@gmail.com"}>
@@ -590,7 +591,7 @@ const Home: NextPage = () => {
         <Name></Name>
         </Linking>
         <BackgroundCanvas>
-            <Image src = {BackgroundIMG} background-size="cover" layout="fill" objectFit="cover"></Image>
+            <Image src = {BackgroundSnakeIMG} background-size="cover" layout="fill" objectFit="cover"></Image>
         </BackgroundCanvas>
     </div>
   )

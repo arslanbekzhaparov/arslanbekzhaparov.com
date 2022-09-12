@@ -5,7 +5,7 @@ import Image from "next/image";
 import Row from '../Row';
 import Column from '../Column';
 import Logo from '../Logo';
-import {Link} from '../Link';
+import {Linking} from '../Link';
 import DownloadImg from '@images/downloadicon.svg';
 
 

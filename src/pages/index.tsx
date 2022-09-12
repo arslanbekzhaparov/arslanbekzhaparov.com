@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import ReactPlayer from 'react-player'
-
+import { device } from '../styles'
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -18,9 +18,8 @@ import HappyhebeeImg from '@images/happyhebeefigure.svg';
 import Icon from "../components/Logo";
 
 
-import Background from '../components/Background';
+import BackgroundIMG from '@images/background.svg'
 import Navbar, {PEAK_HEIGHT}  from "../components/Navbar";
-import ContactButton from "../components/Button";
 import Download from "../components/Download";
 import Name from "../components/Name";
 
@@ -39,6 +38,20 @@ const pulse = keyframes`
 
 const CardDiv = styled.div`
 
+    @media (max-width: 1024px) {
+    }
+
+    @media (max-width: 820px) {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (max-width: 414px) {
+        flex-direction: column;
+    }
+
     position: fixed;
     margin-top: 194px;
     display: flex;
@@ -49,40 +62,81 @@ const CardDiv = styled.div`
     height: 330px;
 `
 const CardCanvas = styled.div`
-    
+
+    @media (max-width: 1024px) {
+        min-width: 550px;
+        max-width: 550px;
+        margin-right: 20px;
+        margin-left: 20px;
+        border-radius: 40px;
+        height: 266.53px; 
+    }
+
+    @media (max-width: 820px) {
+        min-width: 400px;
+        max-width: 400px;
+        border-radius: 35px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    @media (max-width: 414px) {
+        min-width: 260px;
+        max-width: 260px;
+        border-radius: 30px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
     // position: fixed;
+    min-width: 744px;
     max-width: 744px;
     width: 100%;
-    min-width: 744px;
     height: 100%;
+    border-radius: 50px;
     margin-right: 37px;
     margin-left: 37px;
     display: flex;
     flex-direction: row;
 
-    // background-color: black;
     background: rgba(162, 162, 162, 0.2);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(50px);
-    transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
+    transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s
 
-    border-radius: 50px;
 `;
 
 const NextRight = styled.div`
     
+    @media (max-width: 1024px) {
+        height: 266.53px; 
+    }
+
+    @media (max-width: 820px) {
+        width: 300px;
+        margin-bottom: 30px;
+        margin-right: 60px;
+        padding: 10px;
+        
+    }
+    @media (max-width: 414px) {
+        min-width: 260px;
+        max-width: 260px;
+    }
+
+
     // position: relative;
     width: 176px;
     min-width: 86px;
     height: 100%;
     margin-left: 60px;
+    border-radius: 50px;
 
     background: rgba(162, 162, 162, 0.2);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(50px);
     /* Note: backdrop-filter has minimal browser support */
-
-    border-radius: 50px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,19 +154,35 @@ const NextRight = styled.div`
 
 const NextLeft = styled.div`
 
+    @media (max-width: 1024px) {
+        height: 266.53px; 
+    }
+
+    @media (max-width: 820px) {
+        width: 300px;
+        margin-top: 30px;
+        margin-left: 60px;
+        min-height: 62px;
+    }
+
+    @media (max-width: 414px) {
+        min-width: 260px;
+        max-width: 260px;
+    }
+
     // position: absolute;
     width: 176px;
     min-width: 86px;
     height: 100%;
     margin-right: 60px;
     
+    border-radius: 50px;
 
     background: rgba(162, 162, 162, 0.2);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(50px);
     /* Note: backdrop-filter has minimal browser support */
 
-    border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,6 +202,29 @@ const NextLeft = styled.div`
 
 const CardImageContainer = styled.div`
     
+    @media (max-width: 1024px) {
+        width: 229.97px;
+        height: 222.66px;
+        margin: 20px;
+
+        transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
+        background: linear-gradient(-45deg, #AEBFF2, #fff , #292E49);
+        background-size: 400% 400%;
+        animation: ${pulse} 5000ms ease infinite;
+        :hover {
+            transform: scale(1.05);
+            animation-play-state: paused;
+        }
+        :active {
+            transform: scale(0.95);
+            background: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    @media (max-width: 820px) {
+        margin: 15px;
+    }
+
     position: relative;
     width: 284.46px;
     height: 275.41px;
@@ -146,6 +239,19 @@ const CardImageContainer = styled.div`
 
 const VideoContainer = styled.div`
     
+    @media (max-width: 1024px) {
+        display: none;
+    }
+
+    @media (max-width: 820px) {
+        display: none;
+    }
+
+    @media (max-width: 414px) {
+        display: none;
+    }
+
+
     position: absolute;
     width: 234px;
     height: 119px;
@@ -165,6 +271,23 @@ const VideoContainer = styled.div`
 
 const LetterRectangle = styled.div`
     
+    @media (max-width: 1024px) {
+        width: 39.88px;
+        height: 39.88px;
+        border-radius: 15px;
+    }
+
+    @media (max-width: 820px) {
+        width: 26.12px;
+        height: 26.12px;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 414px) {
+        display: none;
+    }
+
+
     position: relative;
     width: 49.33px;
     height: 49.33px;
@@ -175,6 +298,27 @@ const LetterRectangle = styled.div`
 `
 const PrimaryText = styled.div`
     
+    @media (max-width: 1024px) {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+
+    }
+
+    @media (max-width: 820px) {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 24px;;
+        position: relative;
+        margin-left: 5.8px;
+
+    }
+
+    @media (max-width: 414px) {
+        display: none;
+    }
+
+
     position: absolute;
     width: 271px;
     height: 48px;
@@ -193,6 +337,19 @@ const PrimaryText = styled.div`
 
 const YearBlock = styled.div`
     
+    @media (max-width: 1024px) {
+        display: none;
+    }
+
+    @media (max-width: 820px) {
+        display: none;
+    }
+
+    @media (max-width: 414px) {
+        display: none;
+    }
+
+
     position: absolute;
     width: 55.08px;
     height: 29.6px;
@@ -220,6 +377,30 @@ const YearBlock = styled.div`
 
 const Description=styled.div`
 
+
+    @media (max-width: 1024px) {
+        width: 100%px;
+        height: 115px;
+        margin-top: 80px;
+        margin-left: 270px;
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    @media (max-width: 820px) {
+        width: 100%px;
+        height: 115px;
+        margin-top: 60px;
+        margin-left: 260px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    @media (max-width: 414px) {
+        display: none;
+    }
+
+
     position: absolute;
     width: 100%px;
     height: 115px;
@@ -235,6 +416,18 @@ const Description=styled.div`
 `;
 
 const GithubButton=styled.div`
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+
+    @media (max-width: 820px) {
+        display: none;
+    }
+
+    @media (max-width: 414px) {
+        display: none;
+    }
 
     position: absolute;
     width: 100px;
@@ -263,8 +456,68 @@ const GithubButton=styled.div`
     :active {
 		transform: scale(0.95);
         background: rgba(0, 0, 0, 0.5);
+    }
 `;
 
+const FooterDiv = styled.div`
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-top: calc(194px + 330px);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    overflow: hidden;
+`;
+
+const ContactMe = styled.a`
+    
+    width: 213.63px;
+    max-height: 53px;
+    margin-top: 115px;
+
+    position: relative;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: 40.5px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+    transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(50px);
+    background: linear-gradient(-45deg, #AEBFF2, #fff , #292E49);
+    background-size: 400% 400%;
+    animation: ${pulse} 8000ms ease infinite;
+    height: 100vh;
+    
+    :hover{
+        transform: scale(1.05);
+        animation-play-state: paused;
+    }
+    :active {
+		transform: scale(0.95);
+        background: rgba(0, 0, 0, 0.5);
+    }
+`;
+
+const BackgroundCanvas = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    overflow: hidden;
+    z-index: -1;
+`
 
 const Home: NextPage = () => {
   return (
@@ -277,6 +530,7 @@ const Home: NextPage = () => {
             <Image src={NextImg} alt="NextRight"/>
         </NextRight>
         <CardCanvas>
+        <Link href={"https://github.com/arslanbekzhaparov/portfoliowebsite"} disableHoverOpacity>
             <CardImageContainer>
             <Image
                 src={HappyhebeeImg}
@@ -287,6 +541,7 @@ const Home: NextPage = () => {
                 objectFit="contain"
 			/>
             </CardImageContainer>
+            </Link>
             <LetterRectangle>
                 <PrimaryText>
                     HAPPYHEBEE
@@ -297,7 +552,7 @@ const Home: NextPage = () => {
             </YearBlock>
             <VideoContainer>
                 <ReactPlayer 
-                url=''
+                url='https://youtu.be/MUy5li_SdtUhttps://youtu.be/MUy5li_SdtU'
                 />
             </VideoContainer>
             <Link href={"https://github.com/arslanbekzhaparov/portfoliowebsite"} disableHoverOpacity>
@@ -306,21 +561,30 @@ const Home: NextPage = () => {
                 </GithubButton>
             </Link>
             <Description>
-            happyhebee is avatar that manages this websie. happyhebee loves to play sports, games and make music.
+            happyhebee is an avatar that manages this website. happyhebee loves to play sports, games and make music.
             </Description>
         </CardCanvas>
         <NextLeft>
-            <Image src={NextImg} alt="NextLeft"/>
+            <Image 
+            src={NextImg} 
+            alt="NextLeft"
+            
+              />
         </NextLeft>
         </CardDiv>
-      <ContactButton>
-
-      </ContactButton>
-        <Download></Download>
+        <FooterDiv>
+                <ContactMe href={"mailto:arslanbekzhaparov@gmail.com"}>
+                    CONTACT ME
+                </ContactMe>
+        </FooterDiv>
+        <Link href="https://drive.google.com/file/d/15xXFfBQVbw2ARR4nDYoz3Iam44M-wZSh/view?usp=sharing">
+        <Download>
+        </Download>
+        </Link>
         <Name></Name>
-      <Background>
-
-      </Background>
+        <BackgroundCanvas>
+            <Image src = {BackgroundIMG} background-size="cover" layout="fill" objectFit="cover"></Image>
+        </BackgroundCanvas>
     </div>
   )
 }

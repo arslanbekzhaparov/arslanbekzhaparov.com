@@ -24,7 +24,7 @@ const LinkWrapper = styled.a<{
 	}
 `;
 
-export function Link({
+export function Linking({
 	href,
 	width,
 	height,

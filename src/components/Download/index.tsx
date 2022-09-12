@@ -6,7 +6,7 @@ import Row from '../Row';
 import Column from '../Column';
 import Logo from '../Logo';
 import {Link} from '../Link';
-import DownloadImg from '../Download/downloadicon.svg';
+import DownloadImg from '@images/downloadicon.svg';
 
 
 const DownloadIcon = styled.div`
@@ -17,8 +17,8 @@ const DownloadIcon = styled.div`
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    margin-top: calc(100vh - 70px);
-    margin-left: 30px;
+    margin-top: calc(100vh + 750px);
+    margin-right: calc(100vw - 90px);
     
     background: rgba(162, 162, 162, 0.2);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);

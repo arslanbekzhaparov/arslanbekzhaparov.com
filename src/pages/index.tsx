@@ -302,6 +302,7 @@ const PrimaryText = styled.div`
         font-weight: 700;
         font-size: 32px;
         line-height: 39px;
+        margin-top: 0.3px;
 
     }
 
@@ -311,6 +312,7 @@ const PrimaryText = styled.div`
         line-height: 24px;;
         position: relative;
         margin-left: 5.8px;
+        margin-top: 0.7px;
 
     }
 
@@ -379,20 +381,20 @@ const Description=styled.div`
 
 
     @media (max-width: 1024px) {
-        width: 100%px;
+        width: 250px;
         height: 115px;
         margin-top: 80px;
-        margin-left: 270px;
-        font-size: 25px;
+        margin-left: 272px;
+        font-size: 24px;
         line-height: 25px;
     }
 
     @media (max-width: 820px) {
-        width: 100%px;
+        width: 120px;
         height: 115px;
         margin-top: 60px;
         margin-left: 260px;
-        font-size: 20px;
+        font-size: 14px;
         line-height: 20px;
     }
 
@@ -577,11 +579,13 @@ const Home: NextPage = () => {
                     CONTACT ME
                 </ContactMe>
         </FooterDiv>
-        <Link href="https://drive.google.com/file/d/15xXFfBQVbw2ARR4nDYoz3Iam44M-wZSh/view?usp=sharing">
+        <Link href="https://drive.google.com/file/d/15xXFfBQVbw2ARR4nDYoz3Iam44M-wZSh/view?usp=sharing" disableHoverOpacity>
         <Download>
         </Download>
         </Link>
+        <Link href="https://drive.google.com/file/d/15xXFfBQVbw2ARR4nDYoz3Iam44M-wZSh/view?usp=sharing" disableHoverOpacity>
         <Name></Name>
+        </Link>
         <BackgroundCanvas>
             <Image src = {BackgroundIMG} background-size="cover" layout="fill" objectFit="cover"></Image>
         </BackgroundCanvas>

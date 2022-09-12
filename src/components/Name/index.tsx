@@ -11,7 +11,7 @@ import DownloadImg from '../Download/downloadicon.svg';
 
 const About = styled.div`
     
-    position: absolute;
+    position: fixed;
     width: 250px;
     height: 41px;
     border-radius: 20px;
@@ -19,8 +19,11 @@ const About = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: calc(100vh - 75px);
+    margin-top: calc(100vh + 775px);
     margin-left: calc(100vw - 280px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
 
     font-family: 'Arial';
     font-style: normal;
@@ -39,6 +42,10 @@ const About = styled.div`
     :hover{
         transform: scale(1.05);
         background: rgba(162, 162, 162, 0.5);
+    }
+    :active {
+		transform: scale(0.95);
+        background: rgba(0, 0, 0, 0.5);
     }
 `;
 

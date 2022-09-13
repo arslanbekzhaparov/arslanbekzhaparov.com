@@ -540,7 +540,7 @@ const Home: NextPage = () => {
             <CardImageContainer>
             <Image
                 src={SarsImg}
-                alt={"Snake Figure"}
+                alt={"Sars Figure"}
                 layout="responsive"
                 width="100%"
                 height="95%"

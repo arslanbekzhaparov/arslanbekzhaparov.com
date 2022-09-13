@@ -570,6 +570,7 @@ const Home: NextPage = () => {
             snake game is a html/css and java script project that educates users about coordinate system with a fun snake game concept.
             </Description>
         </CardCanvas>
+        <Link href="/index">
         <NextLeft>
             <Image 
             src={NextImg} 
@@ -577,6 +578,7 @@ const Home: NextPage = () => {
             
               />
         </NextLeft>
+        </Link>
         </CardDiv>
         <FooterDiv>
                 <ContactMe href={"mailto:arslanbekzhaparov@gmail.com"}>

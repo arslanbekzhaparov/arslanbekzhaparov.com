@@ -529,9 +529,11 @@ const Home: NextPage = () => {
       <Navbar>
       </Navbar>
       <CardDiv>
+      <Link href="/snake">
         <NextRight>
             <Image src={NextImg} alt="NextRight"/>
         </NextRight>
+        </Link>
         <CardCanvas>
         <Linking href={"https://github.com/arslanbekzhaparov/portfoliowebsite"} disableHoverOpacity>
             <CardImageContainer>

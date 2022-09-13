@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import ReactPlayer from 'react-player'
 import { device } from '../styles'
+import Link from 'next/link'
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -10,16 +11,15 @@ import styled, { keyframes, css, createGlobalStyle, ThemeProvider, DefaultTheme 
 import Row from '../components/Row';
 import Column from '../components/Column';
 import Logo from '../components/Logo';
-import Link from 'next/link'
 import {Linking} from '../components/Link';
 
 import NextImg from '@images/next.svg';
 import GithubLogo from'@images/githublogo.svg';
-import HappyhebeeImg from '@images/happyhebeefigure.svg';
+import SarsImg from '@images/smartarsimg.svg';
 import Icon from "../components/Logo";
 
 
-import BackgroundIMG from '@images/background.svg'
+import BackgroundImgSars from '@images/sarsbackground.svg'
 import Navbar, {PEAK_HEIGHT}  from "../components/Navbar";
 import Download from "../components/Download";
 import Name from "../components/Name";
@@ -209,7 +209,7 @@ const CardImageContainer = styled.div`
         margin: 20px;
 
         transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
-        background: linear-gradient(-45deg, #AEBFF2, #fff , #292E49);
+        background: linear-gradient(-45deg, #83a4d4, #fff , #00c6ff);
         background-size: 400% 400%;
         animation: ${pulse} 5000ms ease infinite;
         :hover {
@@ -382,7 +382,7 @@ const Description=styled.div`
 
 
     @media ${device.laptop} {
-        max-width: 250px;
+        width: 250px;
         height: 115px;
         margin-top: 80px;
         margin-left: 272px;
@@ -391,7 +391,7 @@ const Description=styled.div`
     }
 
     @media ${device.tablet}  {
-        max-width: 120px;
+        width: 120px;
         height: 115px;
         margin-top: 60px;
         margin-left: 260px;
@@ -448,7 +448,7 @@ const GithubButton=styled.div`
     align-items: center;
     justify-content: center;
     transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
-    background: linear-gradient(-45deg, #E6DADA, #274046, #85A9EE);
+    background: linear-gradient(-45deg, #83a4d4, #fff , #00c6ff);
     background-size: 400% 400%;
     animation: ${pulse} 5000ms ease infinite;
     
@@ -496,7 +496,7 @@ const ContactMe = styled.a`
     transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(50px);
-    background: linear-gradient(-45deg, #AEBFF2, #fff , #292E49);
+    background: linear-gradient(-45deg, #83a4d4, #fff , #00c6ff);
     background-size: 400% 400%;
     animation: ${pulse} 8000ms ease infinite;
     height: 100vh;
@@ -522,6 +522,7 @@ const BackgroundCanvas = styled.div`
     z-index: -1;
 `
 
+
 const Home: NextPage = () => {
   return (
     <div>
@@ -529,15 +530,17 @@ const Home: NextPage = () => {
       <Navbar>
       </Navbar>
       <CardDiv>
+        <Link href="/index">
         <NextRight>
             <Image src={NextImg} alt="NextRight"/>
         </NextRight>
+        </Link>
         <CardCanvas>
-        <Linking href={"https://github.com/arslanbekzhaparov/portfoliowebsite"} disableHoverOpacity>
+        <Linking href={"https://github.com/arslanbekzhaparov/Smart-Automatic-Recycling-Sorter"} disableHoverOpacity>
             <CardImageContainer>
             <Image
-                src={HappyhebeeImg}
-                alt={"Happyhebee Figure"}
+                src={SarsImg}
+                alt={"Snake Figure"}
                 layout="responsive"
                 width="100%"
                 height="95%"
@@ -547,7 +550,7 @@ const Home: NextPage = () => {
             </Linking>
             <LetterRectangle>
                 <PrimaryText>
-                    HAPPYHEBEE
+                    SMARTARS
                 </PrimaryText>
             </LetterRectangle>
             <YearBlock>
@@ -555,25 +558,24 @@ const Home: NextPage = () => {
             </YearBlock>
             <VideoContainer>
                 <ReactPlayer 
-                url='https://youtu.be/wLRQso54ZoQ'
+                url='https://youtu.be/-AE6qalB39o'
                 />
             </VideoContainer>
-            <Linking href={"https://github.com/arslanbekzhaparov/portfoliowebsite"} disableHoverOpacity>
+            <Linking href={"https://github.com/arslanbekzhaparov/Smart-Automatic-Recycling-Sorter"} disableHoverOpacity>
                 <GithubButton>
                     <Image src={GithubLogo} alt={GithubLogo} width="80%" height="80%"/>
                 </GithubButton>
             </Linking>
             <Description>
-            happyhebee is an avatar that manages this website. happyhebee loves to play sports, games and make music.
+            smartars is a fully autonomous machine that will sort your recycling for you. it was built utilizing C frameworks.
             </Description>
         </CardCanvas>
-        <Link href="/smartars">
+        <Link href="/snake">
         <NextLeft>
             <Image 
             src={NextImg} 
             alt="NextLeft"
-            
-              />
+            />
         </NextLeft>
         </Link>
         </CardDiv>
@@ -590,7 +592,7 @@ const Home: NextPage = () => {
         <Name></Name>
         </Linking>
         <BackgroundCanvas>
-            <Image src = {BackgroundIMG} background-size="cover" layout="fill" objectFit="cover"></Image>
+            <Image src = {BackgroundImgSars} background-size="cover" layout="fill" objectFit="cover"></Image>
         </BackgroundCanvas>
     </div>
   )

@@ -530,7 +530,7 @@ const Home: NextPage = () => {
       <Navbar>
       </Navbar>
       <CardDiv>
-        <Link href="/index">
+        <Link href="/smartars">
         <NextRight>
             <Image src={NextImg} alt="NextRight"/>
         </NextRight>

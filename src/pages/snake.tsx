@@ -530,7 +530,7 @@ const Home: NextPage = () => {
       <Navbar>
       </Navbar>
       <CardDiv>
-        <Link href="/index">
+        <Link href="/smartars">
         <NextRight>
             <Image src={NextImg} alt="NextRight"/>
         </NextRight>
@@ -554,14 +554,14 @@ const Home: NextPage = () => {
                 </PrimaryText>
             </LetterRectangle>
             <YearBlock>
-                    2022
+                    2020
             </YearBlock>
             <VideoContainer>
                 <ReactPlayer 
-                url='https://youtu.be/MUy5li_SdtUhttps://youtu.be/MUy5li_SdtU'
+                url='https://youtu.be/vJXiZHeK9iE'
                 />
             </VideoContainer>
-            <Linking href={"https://github.com/arslanbekzhaparov/portfoliowebsite"} disableHoverOpacity>
+            <Linking href={"https://github.com/arslanbekzhaparov/SNAKE-MATH-GAME"} disableHoverOpacity>
                 <GithubButton>
                     <Image src={GithubLogo} alt={GithubLogo} width="80%" height="80%"/>
                 </GithubButton>

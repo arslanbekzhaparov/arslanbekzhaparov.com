@@ -11,15 +11,20 @@ import DownloadImg from '@images/downloadicon.svg';
 
 const DownloadIcon = styled.div`
     
+    @media (max-height: 755px) {
+        display: none;
+    }
     position: fixed;
     height: 40px;
     width: 40px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-    margin-top:calc(100vh + 775px); 
-    margin-right: calc(100vw - 90px);
+    bottom: 20px;
+    left: 20px;
+    // margin-bottom: 20px;
+    // margin-top:calc(100vh + 775px); 
+    // margin-right: calc(100vw - 90px);
     overflow: hidden;
     
     background: rgba(162, 162, 162, 0.2);

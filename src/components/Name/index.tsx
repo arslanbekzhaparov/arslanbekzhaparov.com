@@ -10,7 +10,11 @@ import DownloadImg from '../Download/downloadicon.svg';
 
 
 const About = styled.div`
-    
+        
+    @media (max-height: 755px) {
+        display: none;
+    }
+
     position: fixed;
     width: 250px;
     height: 41px;
@@ -19,10 +23,12 @@ const About = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: calc(100vh + 775px);
-    margin-left: calc(100vw - 280px);
-    margin-right: 20px;
-    margin-bottom: 20px;
+    bottom: 20px;
+    right: 20px;
+    // margin-top: calc(100vh + 775px);
+    // margin-left: calc(100vw - 280px);
+    // margin-right: 20px;
+    // margin-bottom: 20px;
     overflow: hidden;
 
     font-family: 'Arial';

@@ -382,7 +382,7 @@ const Description=styled.div`
 
 
     @media ${device.laptop} {
-        width: 250px;
+        max-width: 250px;
         height: 115px;
         margin-top: 80px;
         margin-left: 272px;
@@ -391,7 +391,7 @@ const Description=styled.div`
     }
 
     @media ${device.tablet}  {
-        width: 120px;
+        max-width: 120px;
         height: 115px;
         margin-top: 60px;
         margin-left: 260px;
@@ -555,7 +555,7 @@ const Home: NextPage = () => {
             </YearBlock>
             <VideoContainer>
                 <ReactPlayer 
-                url='https://youtu.be/MUy5li_SdtUhttps://youtu.be/MUy5li_SdtU'
+                url='https://youtu.be/wLRQso54ZoQ'
                 />
             </VideoContainer>
             <Linking href={"https://github.com/arslanbekzhaparov/portfoliowebsite"} disableHoverOpacity>

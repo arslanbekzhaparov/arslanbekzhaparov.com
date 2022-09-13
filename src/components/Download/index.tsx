@@ -11,9 +11,6 @@ import DownloadImg from '@images/downloadicon.svg';
 
 const DownloadIcon = styled.div`
     
-    @media (max-height: 755px) {
-        display: none;
-    }
     position: fixed;
     height: 40px;
     width: 40px;
@@ -47,9 +44,11 @@ const DownloadIcon = styled.div`
 export default function Download(props: any){
 
     return(
+        <Linking href={"https://github.com/arslanbekzhaparov/portfoliowebsite"} disableHoverOpacity>
         <DownloadIcon>
             <Image src = {DownloadImg}></Image>
         </DownloadIcon>
+        </Linking>
         );
 
     }

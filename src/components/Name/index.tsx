@@ -10,10 +10,35 @@ import DownloadImg from '../Download/downloadicon.svg';
 
 
 const About = styled.div`
-        
-    @media (max-height: 755px) {
-        display: none;
-    }
+    
+@media (max-height: 755px) {
+    width: 100%px;
+    height: 40px;
+    top: 50px;
+    left: 20px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 29px;
+    text-align: center;
+    z-index: 1000;
+}
+
+@media (max-width: 666px) {
+    width: 100px;
+    height: 50px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+
+}
+
 
     position: fixed;
     width: 250px;
@@ -53,6 +78,8 @@ const About = styled.div`
 		transform: scale(0.95);
         background: rgba(0, 0, 0, 0.5);
     }
+
+    
 `;
 
 

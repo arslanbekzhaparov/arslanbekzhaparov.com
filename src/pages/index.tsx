@@ -39,17 +39,17 @@ const pulse = keyframes`
 
 const CardDiv = styled.div`
 
-    @media (max-width: 1024px) {
+    @media ${device.laptop} {
     }
 
-    @media (max-width: 820px) {
+    @media ${device.tablet} {
         flex-direction: column;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    @media (max-width: 414px) {
+    @media ${device.mobileL} {
         flex-direction: column;
     }
 
@@ -64,7 +64,7 @@ const CardDiv = styled.div`
 `
 const CardCanvas = styled.div`
 
-    @media (max-width: 1024px) {
+    @media ${device.laptop} {
         min-width: 550px;
         max-width: 550px;
         margin-right: 20px;
@@ -73,7 +73,7 @@ const CardCanvas = styled.div`
         height: 266.53px; 
     }
 
-    @media (max-width: 820px) {
+    @media ${device.tablet} {
         min-width: 400px;
         max-width: 400px;
         border-radius: 35px;
@@ -81,7 +81,7 @@ const CardCanvas = styled.div`
         margin-left: 20px;
     }
 
-    @media (max-width: 414px) {
+    @media ${device.mobileL} {
         min-width: 260px;
         max-width: 260px;
         border-radius: 30px;
@@ -109,18 +109,18 @@ const CardCanvas = styled.div`
 
 const NextRight = styled.div`
     
-    @media (max-width: 1024px) {
+    @media ${device.laptop} {
         height: 266.53px; 
     }
 
-    @media (max-width: 820px) {
+    @media ${device.tablet} {
         width: 300px;
         margin-bottom: 30px;
         margin-right: 60px;
         padding: 10px;
         
     }
-    @media (max-width: 414px) {
+    @media ${device.mobileL}  {
         min-width: 260px;
         max-width: 260px;
     }
@@ -155,18 +155,18 @@ const NextRight = styled.div`
 
 const NextLeft = styled.div`
 
-    @media (max-width: 1024px) {
+    @media ${device.laptop} {
         height: 266.53px; 
     }
 
-    @media (max-width: 820px) {
+    @media ${device.tablet} {
         width: 300px;
         margin-top: 30px;
         margin-left: 60px;
         min-height: 62px;
     }
 
-    @media (max-width: 414px) {
+    @media ${device.mobileL}  {
         min-width: 260px;
         max-width: 260px;
     }
@@ -203,7 +203,7 @@ const NextLeft = styled.div`
 
 const CardImageContainer = styled.div`
     
-    @media (max-width: 1024px) {
+    @media ${device.laptop} {
         width: 229.97px;
         height: 222.66px;
         margin: 20px;
@@ -222,7 +222,7 @@ const CardImageContainer = styled.div`
         }
     }
 
-    @media (max-width: 820px) {
+    @media ${device.tablet} {
         margin: 15px;
     }
 
@@ -240,15 +240,15 @@ const CardImageContainer = styled.div`
 
 const VideoContainer = styled.div`
     
-    @media (max-width: 1024px) {
+    @media ${device.laptop} {
         display: none;
     }
 
-    @media (max-width: 820px) {
+    @media ${device.tablet} {
         display: none;
     }
 
-    @media (max-width: 414px) {
+    @media ${device.mobileL}  {
         display: none;
     }
 
@@ -272,19 +272,19 @@ const VideoContainer = styled.div`
 
 const LetterRectangle = styled.div`
     
-    @media (max-width: 1024px) {
+    @media ${device.laptop} {
         width: 39.88px;
         height: 39.88px;
         border-radius: 15px;
     }
 
-    @media (max-width: 820px) {
+    @media ${device.tablet} {
         width: 26.12px;
         height: 26.12px;
         border-radius: 10px;
     }
 
-    @media (max-width: 414px) {
+    @media ${device.mobileL}  {
         display: none;
     }
 
@@ -299,7 +299,7 @@ const LetterRectangle = styled.div`
 `
 const PrimaryText = styled.div`
     
-    @media (max-width: 1024px) {
+    @media ${device.laptop} {
         font-weight: 700;
         font-size: 32px;
         line-height: 39px;
@@ -307,7 +307,7 @@ const PrimaryText = styled.div`
 
     }
 
-    @media (max-width: 820px) {
+    @media ${device.tablet} {
         font-weight: 700;
         font-size: 17px;
         line-height: 24px;;
@@ -317,7 +317,7 @@ const PrimaryText = styled.div`
 
     }
 
-    @media (max-width: 414px) {
+    @media ${device.mobileL}  {
         display: none;
     }
 
@@ -340,15 +340,15 @@ const PrimaryText = styled.div`
 
 const YearBlock = styled.div`
     
-    @media (max-width: 1024px) {
+    @media ${device.laptop} {
         display: none;
     }
 
-    @media (max-width: 820px) {
+    @media ${device.tablet} {
         display: none;
     }
 
-    @media (max-width: 414px) {
+    @media ${device.mobileL}  {
         display: none;
     }
 
@@ -381,7 +381,7 @@ const YearBlock = styled.div`
 const Description=styled.div`
 
 
-    @media (max-width: 1024px) {
+    @media ${device.laptop} {
         width: 250px;
         height: 115px;
         margin-top: 80px;
@@ -390,7 +390,7 @@ const Description=styled.div`
         line-height: 25px;
     }
 
-    @media (max-width: 820px) {
+    @media ${device.tablet}  {
         width: 120px;
         height: 115px;
         margin-top: 60px;
@@ -399,7 +399,7 @@ const Description=styled.div`
         line-height: 20px;
     }
 
-    @media (max-width: 414px) {
+    @media ${device.mobileL}  {
         display: none;
     }
 
@@ -420,15 +420,15 @@ const Description=styled.div`
 
 const GithubButton=styled.div`
 
-    @media (max-width: 1024px) {
+    @media ${device.laptop} {
         display: none;
     }
 
-    @media (max-width: 820px) {
+    @media ${device.tablet} {
         display: none;
     }
 
-    @media (max-width: 414px) {
+    @media ${device.mobileL} {
         display: none;
     }
 

@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 const size = {
     mobileM: '375px',
-    mobileL: '414px',
+    mobileL: '400px',
     tablet: '820px',
     tabletL: '1024px',
     laptopS: '1024px',

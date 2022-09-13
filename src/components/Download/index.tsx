@@ -44,11 +44,9 @@ const DownloadIcon = styled.div`
 export default function Download(props: any){
 
     return(
-        <Linking href={"https://github.com/arslanbekzhaparov/portfoliowebsite"} disableHoverOpacity>
         <DownloadIcon>
             <Image src = {DownloadImg}></Image>
         </DownloadIcon>
-        </Linking>
         );
 
     }

@@ -529,7 +529,7 @@ const Home: NextPage = () => {
       <Navbar>
       </Navbar>
       <CardDiv>
-      <Link href="/snake">
+      <Link href="/covid">
         <NextRight>
             <Image src={NextImg} alt="NextRight"/>
         </NextRight>

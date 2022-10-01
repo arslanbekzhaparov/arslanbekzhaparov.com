@@ -525,6 +525,23 @@ const BackgroundCanvas = styled.div`
 const Home: NextPage = () => {
   return (
     <div>
+        <Head>
+            <title>Arslanbek Zhaparov</title>
+            <meta name="description" content="Welcome to my portfolio!"/>
+
+            <meta property="og:url" content="https://portfoliowebsite-beryl.vercel.app/"/>
+            <meta property="og:type" content="website"/>
+            <meta property="og:title" content="Arslanbek Zhaparov"/>
+            <meta property="og:description" content="Welcome to my portfolio!"/>
+            <meta property="og:image" content="https://raw.githubusercontent.com/arslanbekzhaparov/arslanbekzhaparov.com/614506dbddbf69712d1b151d3c32279a750cc231/public/images/preview.svg"/>
+
+            <meta name="twitter:card" content="summary_large_image"/>
+            <meta property="twitter:domain" content="portfoliowebsite-beryl.vercel.app"/>
+            <meta property="twitter:url" content="https://portfoliowebsite-beryl.vercel.app/"/>
+            <meta name="twitter:title" content="Arslanbek Zhaparov"/>
+            <meta name="twitter:description" content="Welcome to my portfolio!"/>
+            <meta name="twitter:image" content="https://raw.githubusercontent.com/arslanbekzhaparov/arslanbekzhaparov.com/614506dbddbf69712d1b151d3c32279a750cc231/public/images/preview.svg"/>
+        </Head>
 
       <Navbar>
       </Navbar>

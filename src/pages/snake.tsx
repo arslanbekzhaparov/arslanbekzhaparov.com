@@ -16,6 +16,7 @@ import {Linking} from '../components/Link';
 import NextImg from '@images/next.svg';
 import GithubLogo from'@images/githublogo.svg';
 import SnakeImg from '@images/snake.svg';
+import StatsImg from '@images/snakestats.svg';
 import Icon from "../components/Logo";
 
 
@@ -260,14 +261,39 @@ const VideoContainer = styled.div`
     margin-top: 105px;
     overflow: hidden;
     display: flex;
+    flex-direction: row;
+
+`
+const HealthBar = styled.div`
+    position: absolute;
+    width: 230px;
+    height: 13px;
+
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+`
+const Health = styled.div`
+    width: 230px;
+    height: 13px;
+
+    transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(50px);
+    background: linear-gradient(-45deg, #67B26A, #fff , #67B26F);
+    background-size: 400% 400%;
+    animation: ${pulse} 10000ms ease infinite;
+    border-radius: 20px;
+`
+const Attributes = styled.div`
+    position: relative;
+    width: 234px;
+    height: 90px;
+    top: 35px;
+
+    display: flex;
     align-items: center;
     justify-content: center;
-
-    background: rgba(5, 5, 5, 0.2);
-    backdrop-filter: blur(50px);
-    /* Note: backdrop-filter has minimal browser support */
-
-    border-radius: 20px;
 `
 
 const LetterRectangle = styled.div`
@@ -574,9 +600,12 @@ const Home: NextPage = () => {
                     2020
             </YearBlock>
             <VideoContainer>
-                <ReactPlayer 
-                url='https://youtu.be/vJXiZHeK9iE'
-                />
+                <HealthBar>
+                    <Health></Health>
+                </HealthBar>
+                <Attributes>
+                    <Image src={StatsImg} background-size="cover" layout="fill"></Image>
+                </Attributes>
             </VideoContainer>
             <Linking href={"https://github.com/arslanbekzhaparov/SNAKE-MATH-GAME"} disableHoverOpacity>
                 <GithubButton>

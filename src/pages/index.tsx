@@ -634,7 +634,7 @@ const Home: NextPage = () => {
             happyhebee is an avatar that manages this website. happyhebee loves to play sports, games and make music.
             </Description>
         </CardCanvas>
-        <Link href="/smartars">
+        <Link href="/lovely">
         <NextLeft>
             <Image 
             src={NextImg} 
@@ -649,11 +649,11 @@ const Home: NextPage = () => {
                     CONTACT ME
                 </ContactMe>
         </FooterDiv>
-        <Linking href="https://drive.google.com/file/d/15xXFfBQVbw2ARR4nDYoz3Iam44M-wZSh/view?usp=sharing" disableHoverOpacity>
+        <Linking href="https://drive.google.com/file/d/1DLZw7bMANDGBogoMaFPfB54IR5NjtbtT/view?usp=sharing" disableHoverOpacity>
         <Download>
         </Download>
         </Linking>
-        <Linking href="https://drive.google.com/file/d/15xXFfBQVbw2ARR4nDYoz3Iam44M-wZSh/view?usp=sharing" disableHoverOpacity>
+        <Linking href="https://drive.google.com/file/d/1DLZw7bMANDGBogoMaFPfB54IR5NjtbtT/view?usp=sharing" disableHoverOpacity>
         <Name></Name>
         </Linking>
         <BackgroundCanvas>

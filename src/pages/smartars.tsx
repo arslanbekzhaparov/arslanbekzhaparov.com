@@ -546,7 +546,7 @@ const Home: NextPage = () => {
       <Navbar>
       </Navbar>
       <CardDiv>
-        <Link href="/index">
+        <Link href="/lovely">
         <NextRight>
             <Image src={NextImg} alt="NextRight"/>
         </NextRight>
@@ -600,11 +600,11 @@ const Home: NextPage = () => {
                     CONTACT ME
                 </ContactMe>
         </FooterDiv>
-        <Linking href="https://drive.google.com/file/d/15xXFfBQVbw2ARR4nDYoz3Iam44M-wZSh/view?usp=sharing" disableHoverOpacity>
+        <Linking href="https://drive.google.com/file/d/1DLZw7bMANDGBogoMaFPfB54IR5NjtbtT/view?usp=sharing" disableHoverOpacity>
         <Download>
         </Download>
         </Linking>
-        <Linking href="https://drive.google.com/file/d/15xXFfBQVbw2ARR4nDYoz3Iam44M-wZSh/view?usp=sharing" disableHoverOpacity>
+        <Linking href="https://drive.google.com/file/d/1DLZw7bMANDGBogoMaFPfB54IR5NjtbtT/view?usp=sharing" disableHoverOpacity>
         <Name></Name>
         </Linking>
         <BackgroundCanvas>

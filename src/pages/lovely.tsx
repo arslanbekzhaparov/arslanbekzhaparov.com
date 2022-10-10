@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import ReactPlayer from 'react-player'
 import { device } from '../styles'
-import Link from 'next/link'
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -11,16 +10,17 @@ import styled, { keyframes, css, createGlobalStyle, ThemeProvider, DefaultTheme 
 import Row from '../components/Row';
 import Column from '../components/Column';
 import Logo from '../components/Logo';
+import Link from 'next/link'
 import {Linking} from '../components/Link';
 
 import NextImg from '@images/next.svg';
 import GithubLogo from'@images/githublogo.svg';
-import SnakeImg from '@images/snake.svg';
-import StatsImg from '@images/snakestats.svg';
+import LovelyImg from '@images/lovelyfigure.svg';
+import StatsImg from '@images/lovelystats.svg';
 import Icon from "../components/Logo";
 
 
-import BackgroundSnakeIMG from '@images/backgroundsnake.svg'
+import BackgroundIMG from '@images/lovelybackground.svg'
 import Navbar, {PEAK_HEIGHT}  from "../components/Navbar";
 import Download from "../components/Download";
 import Name from "../components/Name";
@@ -37,6 +37,25 @@ const pulse = keyframes`
     }
 `;
 
+const slideInFromLeft = keyframes`
+    0% { 
+        transform: translateX(-100%);
+        background: #333;
+    }
+    100% { 
+        transform: translateX(0);
+    }
+`;
+  
+const Animation = styled.div`
+    display: block;
+    animation: ${slideInFromLeft} 1s ease-out 0s;
+        
+    background: #333;
+    height: 100vh;
+    width: 100vw;
+    padding: 30px;
+`
 
 const CardDiv = styled.div`
 
@@ -210,7 +229,7 @@ const CardImageContainer = styled.div`
         margin: 20px;
 
         transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
-        background: linear-gradient(-45deg, #67B26F, #fff , #F3904F);
+        background: linear-gradient(-45deg, #FFCDD6, #fff , #D8CFAE);
         background-size: 400% 400%;
         animation: ${pulse} 5000ms ease infinite;
         :hover {
@@ -274,13 +293,13 @@ const HealthBar = styled.div`
     border-radius: 20px;
 `
 const Health = styled.div`
-    width: 230px;
+    width: 50px;
     height: 13px;
 
     transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(50px);
-    background: linear-gradient(-45deg, #67B26A, #fff , #67B26F);
+    background: linear-gradient(-45deg, #FFCDD6, #fff , #C18C92);
     background-size: 400% 400%;
     animation: ${pulse} 10000ms ease infinite;
     border-radius: 20px;
@@ -386,7 +405,7 @@ const YearBlock = styled.div`
     margin-top: 35px;
     margin-left: 655px;
 
-    background: linear-gradient(-45deg, #F8878D, #4776E6, #8E54E9);
+    background: linear-gradient(-45deg, #FFCDD6, #fff , #D8CFAE);
     background-size: 400% 400%;
     animation: ${pulse} 10000ms ease infinite;
     border-radius: 48px;
@@ -408,7 +427,7 @@ const Description=styled.div`
 
 
     @media ${device.laptop} {
-        width: 250px;
+        max-width: 250px;
         height: 115px;
         margin-top: 80px;
         margin-left: 272px;
@@ -417,7 +436,7 @@ const Description=styled.div`
     }
 
     @media ${device.tablet}  {
-        width: 120px;
+        max-width: 120px;
         height: 115px;
         margin-top: 60px;
         margin-left: 260px;
@@ -474,7 +493,7 @@ const GithubButton=styled.div`
     align-items: center;
     justify-content: center;
     transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
-    background: linear-gradient(-45deg, #67B26F, #fff , #F3904F);
+    background: linear-gradient(-45deg, #FFCDD6, #fff , #D8CFAE);
     background-size: 400% 400%;
     animation: ${pulse} 5000ms ease infinite;
     
@@ -522,7 +541,7 @@ const ContactMe = styled.a`
     transition: transform 200ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(50px);
-    background: linear-gradient(-45deg, #67B26F, #fff , #F3904F);
+    background: linear-gradient(-45deg, #FFCDD6, #fff , #D8CFAE);
     background-size: 400% 400%;
     animation: ${pulse} 8000ms ease infinite;
     height: 100vh;
@@ -548,11 +567,9 @@ const BackgroundCanvas = styled.div`
     z-index: -1;
 `
 
-
 const Home: NextPage = () => {
   return (
     <div>
-        
         <Head>
             <title>Arslanbek Zhaparov</title>
             <meta name="description" content="Welcome to my portfolio!"/>
@@ -570,20 +587,21 @@ const Home: NextPage = () => {
             <meta name="twitter:description" content="Welcome to my portfolio!"/>
             <meta name="twitter:image" content="https://github.com/arslanbekzhaparov/arslanbekzhaparov.com/blob/main/public/images/preview.png?raw=true"/>
         </Head>
+
       <Navbar>
       </Navbar>
       <CardDiv>
-        <Link href="/smartars">
+      <Link href="/index">
         <NextRight>
             <Image src={NextImg} alt="NextRight"/>
         </NextRight>
         </Link>
         <CardCanvas>
-        <Linking href={"https://github.com/arslanbekzhaparov/SNAKE-MATH-GAME.git"} disableHoverOpacity>
+        <Linking href={"https://github.com/arslanbekzhaparov/portfoliowebsite"} disableHoverOpacity>
             <CardImageContainer>
             <Image
-                src={SnakeImg}
-                alt={"Snake Figure"}
+                src={LovelyImg}
+                alt={"Lovely Figure"}
                 layout="responsive"
                 width="100%"
                 height="95%"
@@ -593,11 +611,11 @@ const Home: NextPage = () => {
             </Linking>
             <LetterRectangle>
                 <PrimaryText>
-                    SNAKEGAME
+                    LOVELY
                 </PrimaryText>
             </LetterRectangle>
             <YearBlock>
-                    2020
+                    2022
             </YearBlock>
             <VideoContainer>
                 <HealthBar>
@@ -607,16 +625,16 @@ const Home: NextPage = () => {
                     <Image src={StatsImg} background-size="cover" layout="fill"></Image>
                 </Attributes>
             </VideoContainer>
-            <Linking href={"https://github.com/arslanbekzhaparov/SNAKE-MATH-GAME"} disableHoverOpacity>
+            <Linking href={"https://github.com/arslanbekzhaparov/portfoliowebsite"} disableHoverOpacity>
                 <GithubButton>
                     <Image src={GithubLogo} alt={GithubLogo} width="80%" height="80%"/>
                 </GithubButton>
             </Linking>
             <Description>
-            snake game is a html/css and java script project that educates users about coordinate system with a fun snake game concept.
+                Lovely tennis robot is equiped with NVIDIA® Jetson Nano™ to collect and shoot tennis balls to enhance sport mastery.
             </Description>
         </CardCanvas>
-        <Link href="/covid">
+        <Link href="/smartars">
         <NextLeft>
             <Image 
             src={NextImg} 
@@ -639,8 +657,9 @@ const Home: NextPage = () => {
         <Name></Name>
         </Linking>
         <BackgroundCanvas>
-            <Image src = {BackgroundSnakeIMG} background-size="cover" layout="fill" objectFit="cover"></Image>
+            <Image src = {BackgroundIMG} background-size="cover" layout="fill" objectFit="cover"></Image>
         </BackgroundCanvas>
+
     </div>
   )
 }
